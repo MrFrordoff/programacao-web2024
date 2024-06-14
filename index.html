@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="path/to/logo.png" alt="Logo" style="width:50px;height:50px;">
+        <h1>IMC Tracker</h1>
+    </header>
+    <main>
+        <section id="current-status">
+            <h2>Status Atual</h2>
+            <div id="current-bmi">IMC Atual: <span id="bmi-value">N/A</span></div>
+            <div id="current-weight"><i class="fas fa-weight"></i> Peso Atual: <span id="weight-value">N/A</span> kg</div>
+            <div id="goal-weight"><i class="fas fa-bullseye"></i> Objetivo de Peso: <span id="goal-weight-value">N/A</span> kg</div>
+        </section>
+        <section id="weight-entry">
+            <h2>Registrar Peso</h2>
+            <input type="number" id="weight-input" placeholder="Insira seu peso (kg)">
+            <button id="save-weight-btn">Salvar Peso</button>
+        </section>
+        <section id="weight-goal">
+            <h2>Definir Objetivo de Peso</h2>
+            <input type="number" id="goal-input" placeholder="Peso Objetivo (kg)">
+            <button id="save-goal-btn">Salvar Objetivo</button>
+        </section>
+        <section id="progress-chart">
+            <h2>Gráfico de Progresso</h2>
+            <canvas id="bmiChart"></canvas>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="script.js"></script>
+</body>
+</html>
